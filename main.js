@@ -1,10 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
-const {
-  verifyPremioCode,
-  sendEmailCode,
-} = require("./premioCode.controller.js");
+const { sendEmailCode } = require("./premioCode.controller.js");
+const { verifyPremioCode } = require("./verifier.controller.js");
 const app = express();
 
 app.listen(8080, console.log("port 8080"));
